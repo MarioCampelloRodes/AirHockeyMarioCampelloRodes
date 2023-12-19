@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     public GameObject disk;
     //Referencia para las palas
     public GameObject playerLeft, playerRight, playerTop, playerBottom;
+
+    //Puntuaciones Jugadores
+    public int leftScore, rightScore, topScore, bottomScore;
+
     //Referencia para el texto del ganador
     public GameObject panelWin;
 
@@ -24,6 +28,8 @@ public class GameManager : MonoBehaviour
     public Disk diskRef;
 
     public string lastCollision;
+
+    //Referencia al script GoalZone
 
     //Método para hacer lo que ocurre al marcar un punto
     public void GoalScored()
@@ -51,10 +57,16 @@ public class GameManager : MonoBehaviour
             direction = new Vector2(0f, -disk.GetComponent<Rigidbody2D>().velocity.y);
 
             disk.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        } 
+        else 
+        {
+            direction = new Vector2(0f, -disk.GetComponent<Rigidbody2D>().velocity.y);
+
+            disk.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
         //Usando Invoke esperamos X segundos antes de llamara un método
-        Invoke("LaunchDisk", 2.0f); //Le decimos el método que quiero invocar y el tiempo que tiene que pasar en segundos para que eso suceda
+        Invoke("LaunchDisk", 1.0f); //Le decimos el método que quiero invocar y el tiempo que tiene que pasar en segundos para que eso suceda
     }
 
     //Método para hacer que el disco se lance
@@ -67,17 +79,17 @@ public class GameManager : MonoBehaviour
     //Método para resetear el juego cuando uno gana
     public void WinGame()
     {
+        //Si la puntuación que tenemos guardada en esa portería es mayor de 9
+        if (leftScore >= 9)
+            winText.text = "El Jugador Rojo ha ganado!!";
+        else if(rightScore >= 9)
+            winText.text = "El Jugador Morado ha ganado!!";
+        else if (topScore >= 9)
+            winText.text = "El Jugador Verde ha ganado!!";
+        else if (bottomScore >= 9)
+            winText.text = "El Jugador Azul ha ganado!!";
         //SetActive sirve para activar o desactivar objetos
         panelWin.SetActive(true);
-        //Si la puntuación que tenemos guardada en esa portería es mayor de 9
-        if (goalLeft.GetComponent<GoalZone>().score > 9)
-            winText.text = "El Jugador Rojo ha ganado!!";
-        else if(goalRight.GetComponent<GoalZone>().score > 9)
-            winText.text = "El Jugador Morado ha ganado!!";
-        else if (goalTop.GetComponent<GoalZone>().score > 9)
-            winText.text = "El Jugador Verde ha ganado!!";
-        else if (goalBottom.GetComponent<GoalZone>().score > 9)
-            winText.text = "El Jugador Azul ha ganado!!";
         //Esperamos 2 segundos antes de ir a la pantalla del título
         Invoke("GoMenu", 2f);
     }

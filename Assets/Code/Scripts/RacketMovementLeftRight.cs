@@ -5,7 +5,7 @@ using UnityEngine;
 public class RacketMovementLeftRight : MonoBehaviour
 {
     //Velocidad de la raqueta
-    public float racketSpeed = 25f;
+    public float racketSpeed = 15f;
     //Creo una referencia al eje que quiero utilizar
     public string axe;
     //Esto es una referencia al RigidBody del jugador que nos permite cambiar su velocidad

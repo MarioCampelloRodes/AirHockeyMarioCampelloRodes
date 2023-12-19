@@ -733,7 +733,6 @@ MonoBehaviour:
   diskSpeed: 8
   rb: {fileID: 406617414}
   lastCollisionRacket: 
-  previousCollisionRacket: 
 --- !u!61 &406617416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -953,8 +952,7 @@ MonoBehaviour:
   pointsRight: {fileID: 2104407851}
   pointsTop: {fileID: 1313577965}
   pointsBottom: {fileID: 906405191}
-  score: 0
-  gMReference: {fileID: 1298291028}
+  gMRef: {fileID: 1298291028}
   diskRef: {fileID: 406617415}
 --- !u!61 &645110341
 BoxCollider2D:
@@ -988,7 +986,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012708962, y: 0.00000047683716}
+  m_Offset: {x: -0.20475453, y: 0.012310982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -999,7 +997,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2287587, y: 9.720164}
+  m_Size: {x: 1.6128498, y: 9.203119}
   m_EdgeRadius: 0
 --- !u!1 &775859129
 GameObject:
@@ -1158,7 +1156,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08896136, y: -0.0000014305115}
+  m_Offset: {x: 0.20714277, y: 0.024620056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1169,7 +1167,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1779227, y: 9.677802}
+  m_Size: {x: 1.4142855, y: 8.988409}
   m_EdgeRadius: 0
 --- !u!4 &811530429
 Transform:
@@ -1202,8 +1200,7 @@ MonoBehaviour:
   pointsRight: {fileID: 2104407851}
   pointsTop: {fileID: 1313577965}
   pointsBottom: {fileID: 906405191}
-  score: 0
-  gMReference: {fileID: 1298291028}
+  gMRef: {fileID: 1298291028}
   diskRef: {fileID: 406617415}
 --- !u!1 &906405189
 GameObject:
@@ -1239,7 +1236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -890}
+  m_AnchoredPosition: {x: 0, y: -869}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &906405191
@@ -1264,8 +1261,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 803f8788a946a6449945f10505110da5, type: 2}
-  m_sharedMaterial: {fileID: -7378462557936458780, guid: 803f8788a946a6449945f10505110da5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
+  m_sharedMaterial: {fileID: 4111806054649376370, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1454,8 +1451,7 @@ MonoBehaviour:
   pointsRight: {fileID: 2104407851}
   pointsTop: {fileID: 1313577965}
   pointsBottom: {fileID: 906405191}
-  score: 0
-  gMReference: {fileID: 1298291028}
+  gMRef: {fileID: 1298291028}
   diskRef: {fileID: 406617415}
 --- !u!61 &1138390827
 BoxCollider2D:
@@ -1489,7 +1485,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06354368, y: -0.010590553}
+  m_Offset: {x: 0.2703619, y: 0.026341438}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1500,7 +1496,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1270874, y: 9.65662}
+  m_Size: {x: 1.5407238, y: 9.23806}
   m_EdgeRadius: 0
 --- !u!1 &1165308250
 GameObject:
@@ -1567,7 +1563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -890, y: 0}
+  m_AnchoredPosition: {x: -870, y: 0}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171586197
@@ -1592,8 +1588,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 803f8788a946a6449945f10505110da5, type: 2}
-  m_sharedMaterial: {fileID: -7378462557936458780, guid: 803f8788a946a6449945f10505110da5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
+  m_sharedMaterial: {fileID: 4111806054649376370, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1784,6 +1780,10 @@ MonoBehaviour:
   playerRight: {fileID: 1645977798}
   playerTop: {fileID: 1951025562}
   playerBottom: {fileID: 387629762}
+  leftScore: 0
+  rightScore: 0
+  topScore: 0
+  bottomScore: 0
   panelWin: {fileID: 775859129}
   goalLeft: {fileID: 811530427}
   goalRight: {fileID: 1545660570}
@@ -1826,7 +1826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 890}
+  m_AnchoredPosition: {x: 0, y: 875}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313577965
@@ -1851,8 +1851,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 803f8788a946a6449945f10505110da5, type: 2}
-  m_sharedMaterial: {fileID: -7378462557936458780, guid: 803f8788a946a6449945f10505110da5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
+  m_sharedMaterial: {fileID: 4111806054649376370, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2443,7 +2443,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0762527, y: 0.021181345}
+  m_Offset: {x: -0.209207, y: -0.0034399033}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2454,7 +2454,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1525054, y: 9.593075}
+  m_Size: {x: 1.418414, y: 8.952925}
   m_EdgeRadius: 0
 --- !u!4 &1545660572
 Transform:
@@ -2487,8 +2487,7 @@ MonoBehaviour:
   pointsRight: {fileID: 2104407851}
   pointsTop: {fileID: 1313577965}
   pointsBottom: {fileID: 906405191}
-  score: 0
-  gMReference: {fileID: 1298291028}
+  gMRef: {fileID: 1298291028}
   diskRef: {fileID: 406617415}
 --- !u!1001 &1629332982
 PrefabInstance:
@@ -3315,7 +3314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 890, y: 0}
+  m_AnchoredPosition: {x: 876, y: 0}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104407851
@@ -3340,8 +3339,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 803f8788a946a6449945f10505110da5, type: 2}
-  m_sharedMaterial: {fileID: -7378462557936458780, guid: 803f8788a946a6449945f10505110da5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
+  m_sharedMaterial: {fileID: 4111806054649376370, guid: e87060d7482c2f841a8ceff3998b8fa9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

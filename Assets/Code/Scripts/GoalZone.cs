@@ -7,24 +7,21 @@ public class GoalZone : MonoBehaviour
 {
     //Referencia para acceder al marcador de puntos
     public TextMeshProUGUI pointsLeft, pointsRight, pointsTop, pointsBottom;
-    //Variable para guardar los puntos marcados en esa portería
-    public int score;
 
     //Referencia al GameManager
-    public GameManager gMReference;
+    public GameManager gMRef;
 
+    //Referencia al script del disco
     public Disk diskRef;
 
     //Antes de que empiece el juego
     private void Awake()
     {
-        //Ponemos la puntuación en 0
-        score = 0;
         //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
-        pointsLeft.text = score.ToString();
-        pointsRight.text = score.ToString();
-        pointsTop.text = score.ToString();
-        pointsBottom.text = score.ToString();
+        pointsLeft.text = gMRef.leftScore.ToString();
+        pointsRight.text = gMRef.rightScore.ToString();
+        pointsTop.text = gMRef.topScore.ToString();
+        pointsBottom.text = gMRef.bottomScore.ToString();
 
         //Para transformar un int en un string hay 3 maneras
         //scoreText.text = score + ""; le sumo un string vacío a ese int, luego ya será todo un string
@@ -38,50 +35,50 @@ public class GoalZone : MonoBehaviour
         //Solo aquellos GameObjects etiquetados como Disco, que hayan entrado en el trigger
         if (collision.CompareTag("Disco"))
         {
-            //Sumo 1 a la puntuación
-            score++;
             //Si la puntuación es mayor de 9
-            if (score > 9)
+            if (gMRef.leftScore < 9 && gMRef.rightScore < 9 && gMRef.topScore < 9 && gMRef.bottomScore < 9)
             {
-                //Ejecuto el método que hace que se pase a otra ronda
-                gMReference.GoalScored();
-                //Ejecuto el método que termina esta partida
-                gMReference.WinGame();
+                if (diskRef.lastCollisionRacket == "PlayerLeft" && gameObject.name != "GoalLeft")
+                {
+                    gMRef.leftScore++;
+                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
+                    pointsLeft.text = gMRef.leftScore.ToString();
+                    //Ejecuto el método que hace que se pase a otra ronda
+                    gMRef.GoalScored();
+                }
+                else if (diskRef.lastCollisionRacket == "PlayerRight" && gameObject.name != "GoalRight")
+                {
+                    gMRef.rightScore++;
+                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
+                    pointsRight.text = gMRef.rightScore.ToString();
+                    //Ejecuto el método que hace que se pase a otra ronda
+                    gMRef.GoalScored();
+                }
+                else if (diskRef.lastCollisionRacket == "PlayerTop" && gameObject.name != "GoalTop")
+                {
+                    gMRef.topScore++;
+                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
+                    pointsTop.text = gMRef.topScore.ToString();
+                    //Ejecuto el método que hace que se pase a otra ronda
+                    gMRef.GoalScored();
+                }
+                else if (diskRef.lastCollisionRacket == "PlayerBottom" && gameObject.name != "GoalBottom")
+                {
+                    gMRef.bottomScore++;
+                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
+                    pointsBottom.text = gMRef.bottomScore.ToString();
+                    //Ejecuto el método que hace que se pase a otra ronda
+                    gMRef.GoalScored();
+                }
+                else
+                    gMRef.GoalScored();
             }
-            //Si no
             else
             {
-                if(diskRef.lastCollisionRacket == "PlayerLeft" && gameObject.name != "GoalLeft")
-                {
-                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
-                    pointsLeft.text = score.ToString();
-                    //Ejecuto el método que hace que se pase a otra ronda
-                    gMReference.GoalScored();
-                }
-
-                if (diskRef.lastCollisionRacket == "PlayerRight" && gameObject.name != "GoalRight")
-                {
-                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
-                    pointsRight.text = score.ToString();
-                    //Ejecuto el método que hace que se pase a otra ronda
-                    gMReference.GoalScored();
-                }
-
-                if (diskRef.lastCollisionRacket == "PlayerTop" && gameObject.name != "GoalTop")
-                {
-                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
-                    pointsTop.text = score.ToString();
-                    //Ejecuto el método que hace que se pase a otra ronda
-                    gMReference.GoalScored();
-                }
-
-                if (diskRef.lastCollisionRacket == "PlayerBottom" && gameObject.name != "GoalBottom")
-                {
-                    //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
-                    pointsBottom.text = score.ToString();
-                    //Ejecuto el método que hace que se pase a otra ronda
-                    gMReference.GoalScored();
-                }
+                //Ejecuto el método que hace que se pase a otra ronda
+                gMRef.GoalScored();
+                //Ejecuto el método que termina esta partida
+                gMRef.WinGame();
             }
         }
     }

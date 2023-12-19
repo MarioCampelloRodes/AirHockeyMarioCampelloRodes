@@ -59,7 +59,7 @@ public class GoalZone : MonoBehaviour
                     gMReference.GoalScored();
                 }
 
-                if (diskRef.lastCollisionRacket == "PlayerRight" && gameObject.name != "GoalLeft")
+                if (diskRef.lastCollisionRacket == "PlayerRight" && gameObject.name != "GoalRight")
                 {
                     //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
                     pointsRight.text = score.ToString();
@@ -67,7 +67,7 @@ public class GoalZone : MonoBehaviour
                     gMReference.GoalScored();
                 }
 
-                if (diskRef.lastCollisionRacket == "PlayerTop" && gameObject.name != "GoalLeft")
+                if (diskRef.lastCollisionRacket == "PlayerTop" && gameObject.name != "GoalTop")
                 {
                     //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
                     pointsTop.text = score.ToString();
@@ -75,7 +75,7 @@ public class GoalZone : MonoBehaviour
                     gMReference.GoalScored();
                 }
 
-                if (diskRef.lastCollisionRacket == "PlayerBottom" && gameObject.name != "GoalLeft")
+                if (diskRef.lastCollisionRacket == "PlayerBottom" && gameObject.name != "GoalBottom")
                 {
                     //Cambiamos el texto de la puntuación al valor que tenga en ese momento el score
                     pointsBottom.text = score.ToString();

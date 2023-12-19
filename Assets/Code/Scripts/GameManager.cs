@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
         else if (lastCollision == "PlayerTop" || lastCollision == "PlayerBottom")
         {
-            direction = new Vector2(0f, -disk.GetComponent<Rigidbody2D>().velocity.x);
+            direction = new Vector2(0f, -disk.GetComponent<Rigidbody2D>().velocity.y);
 
             disk.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     void LaunchDisk()
     {
         //Aplicamos esa nueva dirección en el disco
-        disk.GetComponent<Rigidbody2D>().velocity = direction * diskRef.diskSpeed;
+        disk.GetComponent<Rigidbody2D>().velocity = direction;
     }
 
     //Método para resetear el juego cuando uno gana
